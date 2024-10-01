@@ -1,0 +1,203 @@
+{
+    "BharatPe": {
+        "Products": {
+            "Settlement": {
+                "Pending": {
+                    "Within 48 hrs": "Asked to wait T+2 days",
+                    "After 48 hrs": "Escalate to L2"
+                },
+                "Success": {
+                    "Within 48 hrs": "Asked to wait 24-48 hours",
+                    "After 48 hrs": "Asked to wait up to 72 hours",
+                    "After 72 hrs": "Escalate to L2"
+                },
+                "Failed": "Ask to try again; change bank account if this occurs multiple times"
+            },
+            "QR Code Payments": {
+                "Transaction Not Visible": {
+                    "UTR Available": "Ask for a screenshot",
+                    "UTR Not Available": "Politely deny"
+                },
+                "CCUPI": {
+                    "Charges": "2.05% Flat",
+                    "Turn Off": [
+                        "Step 1: Open BharatPe App",
+                        "Step 2: Go to Payments tab",
+                        "Step 3: Click on Payment Preference",
+                        "Step 4: Select 'No' for chargeable QR"
+                    ]
+                },
+                "Disputed": {}
+            },
+            "BharatSwipe": {
+                "New Order": {
+                    "Device Types": {
+                        "D1": {
+                            "Price": "10,000 Rs",
+                            "Features": [
+                                "Feature 1",
+                                "Feature 2"
+                            ]
+                        },
+                        "D2": {
+                            "Price": "12,000 Rs",
+                            "Features": [
+                                "Feature 1",
+                                "Feature 3"
+                            ]
+                        },
+                        "D3": {
+                            "Price": "15,000 Rs",
+                            "Features": [
+                                "Feature 2",
+                                "Feature 3"
+                            ]
+                        },
+                        "D4": {
+                            "Price": "20,000 Rs",
+                            "Features": [
+                                "Feature 1",
+                                "Feature 2",
+                                "Feature 3"
+                            ]
+                        }
+                    },
+                    "Order Steps": [
+                        "Step 1: Open BharatPe App",
+                        "Step 2: Go to the More option",
+                        "Step 3: Click on BharatSwipe",
+                        "Step 4: Select a plan",
+                        "Step 5: Fill in the address",
+                        "Step 6: Select a payment method"
+                    ]
+                },
+                "Not Working": {
+                    "Network Issue": "Troubleshoot and escalate to L2",
+                    "Card Not Working": {
+                        "One Card Not Working": {
+                            "Expired Card": "Change the card and try again"
+                        },
+                        "Multiple Cards Not Working": {
+                            "Declined Payment": "Try using another source; it will be resolved automatically"
+                        }
+                    }
+                },
+                "Disputed": {},
+                "Transaction Not Visible": {
+                    "Amount Debited": {
+                        "Receipt Printed": "Proof required",
+                        "Receipt Not Printed": "Ask the customer to raise a chargeback with their bank"
+                    }
+                }
+            },
+            "BharatPe One": {
+                "New Order": {
+                    "Plans": {
+                        "Basic": {
+                            "Price": "500 Rs/month",
+                            "Features": [
+                                "Feature A",
+                                "Feature B"
+                            ]
+                        },
+                        "Premium": {
+                            "Price": "1,000 Rs/month",
+                            "Features": [
+                                "Feature A",
+                                "Feature C",
+                                "Feature D"
+                            ]
+                        },
+                        "LUC": "99 Rs + 18% GST = 117 Rs if the transaction of 50,000 Rs is not completed with 50 unique customers"
+                    }
+                },
+                "Features": [
+                    "Tap and Pay",
+                    "Scan and Pay",
+                    "Voice Notifications",
+                    "Insert Card to Pay",
+                    "Portable Design",
+                    "4G and Wi-Fi",
+                    "Android - Easy to use"
+                ],
+                "Not Working": {
+                    "Network Issue": "Troubleshoot and escalate to L2",
+                    "Error Codes": "Proof required"
+                }
+            },
+            "Investment": {
+                "Unable to Withdraw": {
+                    "Within Lock-In": "Timeline shared",
+                    "After Lock-In": "Proof required"
+                }
+            },
+            "BharatPe Speaker": {
+                "New Order": {
+                    "Plans": {
+                        "Standard": {
+                            "Price": "1,500 Rs",
+                            "Features": [
+                                "Feature X",
+                                "Feature Y"
+                            ]
+                        },
+                        "Deluxe": {
+                            "Price": "2,500 Rs",
+                            "Features": [
+                                "Feature X",
+                                "Feature Z"
+                            ]
+                        }
+                    }
+                },
+                "Cashback": {
+                    "Information": "Inform about the minimum number of transactions required",
+                    "Not Received": {
+                        "Eligibility": {
+                            "Yes": "Escalate to L2",
+                            "No": "Information shared"
+                        }
+                    }
+                },
+                "Replacement": {
+                    "Timeline": {
+                        "Approval": "48 hrs",
+                        "Pick-up": "5 days",
+                        "Delivery": "4 days"
+                    },
+                    "Approval": {
+                        "Pending": {
+                            "Within 48 hrs": "Asked to wait 48 hours",
+                            "After 48 hrs": "Escalate to L2"
+                        }
+                    },
+                    "Pick-up": {
+                        "Pending": {
+                            "Within 5 days": "Asked to wait 5 days from the request acceptance date",
+                            "After 5 days": "Escalate to L2"
+                        },
+                        "Failed": "Raise a new service request"
+                    },
+                    "Delivery": {
+                        "Pending": {
+                            "Within 7 days or Expected Delivery Date": "Asked to wait 4 days from the pick-up date or the date mentioned on the Order tab",
+                            "After 7 days or Expected Delivery Date": "Escalate to L2"
+                        }
+                    }
+                },
+                "Return": {
+                    "Timeline": "7 days",
+                    "Charges": "250 Rs + 18% GST = 295 Rs",
+                    "Pick-up": {
+                        "Status": "Scheduled",
+                        "Remarks": "Pick-up scheduled within 2 days"
+                    },
+                    "Delivered": {
+                        "Status": "Pending",
+                        "Remarks": "Awaiting delivery confirmation"
+                    }
+                }
+            }
+        }
+    }
+}
