@@ -11,52 +11,158 @@
                     "After 48 hrs": "Asked to wait up to 72 hours",
                     "After 72 hrs": "Escalate to L2"
                 },
+                "Failed": "Ask to try again; change bank account if this occurs multiple times",
+                "Hold/Block": {
+                    "Specific Amount": {
+                        "Documents": [
+                            "1. Voter ID/Driving Licence",
+                            "2. PAN",
+                            "3. Shop Image (Inventory and Banner)",
+                            "4. Business Documents",
+                            "5. Last Five Transaction Invoices"
+                        ],
+                        "TAT": "24 to 48 hrs after upload, team will notify",
+                        "Tagging": {
+                            "Within TAT": [
+                                "T1: Hold/Block",
+                                "T2: Account Hold",
+                                "T3: Settlement Hold/Block",
+                                "Status: Proof Required"
+                            ],
+                            "Beyond TAT": [
+                                "T1: Hold/Block",
+                                "T2: Account Hold",
+                                "T3: Document Already Uploaded / Document Rejected",
+                                "Status: Escalate to L2"
+                            ]
+                        }
+                    },
+                    "TMS Hold/Block": {
+                        "Documents": "Refer to sheet present in Documents of Qbuddy",
+                        "TAT": "24 to 48 hrs after upload, team will notify",
+                        "Tagging": [
+                            "T1: Hold/Block",
+                            "T2: Account Hold",
+                            "T3: Settlement Hold/Block",
+                            "Status: Resolved"
+                        ]
+                    },
+                    "Bank/Cyber Crime Denying for Clearance Letter": {
+                        "Description": "Advise the merchant to coordinate with the relevant source and obtain a clearance letter.",
+                        "Additional Guidance": "If the merchant claims to have already contacted the police and sent an email, please request a copy of the email that was shared with the police and also with us.",
+                        "Tagging": [
+                            "T1: Hold/Block",
+                            "T2: Account Hold",
+                            "T3: Bank/Cyber Crime Denying for Clearance Letter",
+                            "Status: Resolved"
+                        ]
+                    }
+                }
+            },
+            "Withdrawal": {
+                "Pending": {
+                    "Within 48 hrs": "Asked to wait T+2 days",
+                    "After 48 hrs": "Escalate to L2"
+                },
+                "Success": {
+                    "Within 48 hrs": "Asked to wait 24-48 hours",
+                    "After 48 hrs": "Asked to wait up to 72 hours",
+                    "After 72 hrs": "Escalate to L2"
+                },
                 "Failed": "Ask to try again; change bank account if this occurs multiple times"
             },
-            "QR Code Payments": {
-                "Transaction Not Visible": {
-                    "UTR Available": "Ask for a screenshot",
-                    "UTR Not Available": "Politely deny"
+            "QR Code": {
+                "Payments": {
+                    "Transaction Not Visible": {
+                        "UTR Available": "Ask for a screenshot",
+                        "UTR Not Available": "Politely deny"
+                    },
+                    "CCUPI": {
+                        "Charges": "2.05% Flat",
+                        "Turn Off": [
+                            "Step 1: Open BharatPe App",
+                            "Step 2: Go to Payments tab",
+                            "Step 3: Click on Payment Preference",
+                            "Step 4: Select 'No' for chargeable QR"
+                        ],
+                        "Tagging": [
+                            "T1: Payments",
+                            "T2: Accepting Payments",
+                            "T3: Info About CCUPI",
+                            "Status: Resolved"
+                        ]
+                    },
+                    "Disputed": {
+                        "Chargeback": {
+                            "Documents": [
+                                "GST Invoice",
+                                "Printed Bill",
+                                "Authorization letter (only if amount is less than 25,000)"
+                            ],
+                            "TAT": "90 Working Days",
+                            "Tagging": {
+                                "Within TAT": [
+                                    "T1: BharatSwipe",
+                                    "T2: Disputed Transaction",
+                                    "T3: Qr Chargeback",
+                                    "Status: Resolved"
+                                ],
+                                "Beyond TAT": [
+                                    "T1: BharatSwipe",
+                                    "T2: Disputed Transaction",
+                                    "T3: Qr Chargeback",
+                                    "Status: Escalate to L2"
+                                ]
+                            }
+                        }
+                    }
                 },
-                "CCUPI": {
-                    "Charges": "2.05% Flat",
-                    "Turn Off": [
+                "Order": {
+                    "Steps": [
                         "Step 1: Open BharatPe App",
-                        "Step 2: Go to Payments tab",
-                        "Step 3: Click on Payment Preference",
-                        "Step 4: Select 'No' for chargeable QR"
-                    ]
-                },
-                "Disputed": {}
+                        "Step 2: Go to More tab",
+                        "Step 3: Click on QR",
+                        "Step 4: Select My QR",
+                        "Step 5: Select Delivery address"
+                    ],
+                    "TAT": "7 Days",
+                    "Tagging": {
+                        "Within TAT": [
+                            "T1: Qr Code",
+                            "T2: Not Ordered",
+                            "T3: How to Place Qr Order",
+                            "Status: Resolved"
+                        ],
+                        "Beyond TAT": [
+                            "Ask mx to place a new order",
+                            "T1: Qr Code",
+                            "T2: Not Ordered",
+                            "T3: How to Place Qr Order",
+                            "Status: Resolved"
+                        ]
+                    }
+                }
             },
             "BharatSwipe": {
                 "New Order": {
                     "Device Types": {
-                        "D1": {
+                        "Payswiff 2G": {
                             "Price": "10,000 Rs",
                             "Features": [
                                 "Feature 1",
                                 "Feature 2"
                             ]
                         },
-                        "D2": {
+                        "Payswiff 4G": {
                             "Price": "12,000 Rs",
                             "Features": [
                                 "Feature 1",
                                 "Feature 3"
                             ]
                         },
-                        "D3": {
+                        "Android": {
                             "Price": "15,000 Rs",
                             "Features": [
-                                "Feature 2",
-                                "Feature 3"
-                            ]
-                        },
-                        "D4": {
-                            "Price": "20,000 Rs",
-                            "Features": [
-                                "Feature 1",
                                 "Feature 2",
                                 "Feature 3"
                             ]
@@ -82,7 +188,74 @@
                         }
                     }
                 },
-                "Disputed": {},
+                "Disputed": {
+                    "Internal Enquiry": {
+                        "Documents": [
+                            "GST Invoice",
+                            "Printed Bill",
+                            "Authorization letter (only if amount is less than 25,000)"
+                        ],
+                        "TAT": "3 Working Days",
+                        "Tagging": {
+                            "Within TAT": [
+                                "T1: Hold/Block",
+                                "T2: Transaction Hold",
+                                "T3: Swipe Hold/Block",
+                                "Status: Resolved"
+                            ],
+                            "Beyond TAT": [
+                                "T1: Hold/Block",
+                                "T2: Transaction Hold",
+                                "T3: Swipe Hold/Block",
+                                "Status: Escalate to L2"
+                            ]
+                        }
+                    },
+                    "Chargeback": {
+                        "Documents": [
+                            "GST Invoice",
+                            "Printed Bill",
+                            "Authorization letter (only if amount is less than 25,000)"
+                        ],
+                        "TAT": "90 Working Days",
+                        "Tagging": {
+                            "Within TAT": [
+                                "T1: BharatSwipe",
+                                "T2: Disputed Transaction",
+                                "T3: Customer Chargeback",
+                                "Status: Resolved"
+                            ],
+                            "Beyond TAT": [
+                                "T1: BharatSwipe",
+                                "T2: Disputed Transaction",
+                                "T3: Customer Chargeback",
+                                "Status: Escalate to L2"
+                            ]
+                        }
+                    },
+                    "Bank MRA": {
+                        "Documents": [
+                            "GST Invoice",
+                            "Printed Bill",
+                            "Authorization letter (only if amount is less than 25,000)"
+                        ],
+                        "TAT": "90 Normal Days",
+                        "Tagging": {
+                            "Within TAT": [
+                                "T1: BharatSwipe",
+                                "T2: Disputed Transaction",
+                                "T3: Bank MRA",
+                                "Status: Resolved"
+                            ],
+                            "Beyond TAT": [
+                                "T1: BharatSwipe",
+                                "T2: Disputed Transaction",
+                                "T3: Bank MRA",
+                                "Status: Escalate to L2"
+                            ]
+                        }
+                    }
+                },
                 "Transaction Not Visible": {
                     "Amount Debited": {
                         "Receipt Printed": "Proof required",
@@ -197,6 +370,26 @@
                         "Remarks": "Awaiting delivery confirmation"
                     }
                 }
+            },
+            "Bluetooth Speaker": {
+                "Features": [
+                    "Real-time audio alert of transactions",
+                    "Bluetooth audio streaming",
+                    "USB Type-C support",
+                    "Indigenous manufacturer",
+                    "Instant audio payment confirmation",
+                    "Available in 10 regional languages",
+                    "3-day battery backup with 5-6 hours of single charge",
+                    "Connects to SIM, no Wi-Fi required",
+                    "Replay your last transaction",
+                    "Free lifetime replacement"
+                ]
+            },
+            "Lending":{
+                "Not Applied":{},
+                "Applied":{},
+                "Active":{},
+                "Closed":{}
             }
         }
     }

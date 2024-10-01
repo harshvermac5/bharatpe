@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BharatPe Hbuddy</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./bharatpe.css">
     <link rel="icon" href="./bharatpe.png" type="image/png">
-</head>
-<body>
-    <nav>
-        <h1>BharatPe Hbuddy</h1>
-        <button id="toggleButton">Toggle Dark Mode</button>
-    </nav>
-    <div class="container">
-        <div id="dropdowns"></div>
-        <div id="output"></div>
-    </div>
-    <footer>
-        <p>Made with 💗 by Harshvermac5</p>
-    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
 
+</head>
+
+<body>
+    <div class="flex flex-col min-h-screen">
+        <main class="flex-grow">
+            <!-- Navbar -->
+            <nav class="flex justify-between items-center bg-gray-800 h-16 px-6">
+                <h1 class="text-white tracking-tighter font-bold text-2xl">BharatPe Hbuddy</h1>
+                <label for="darkModeToggle"
+                    class="relative inline-block h-8 w-12 cursor-pointer [-webkit-tap-highlight-color:_transparent]">
+                    <input type="checkbox" id="darkModeToggle" class="peer sr-only" />
+
+                    <span class="absolute inset-0 m-auto h-2 rounded-full bg-gray-300"></span>
+
+                    <span
+                        class="absolute inset-y-0 start-0 m-auto size-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
+                        <span class="absolute inset-0 m-auto size-4 rounded-full bg-gray-200 transition"></span>
+                    </span>
+                </label>
+
+            </nav>
+            <!-- Your main content goes here -->
+            <div class="flex w-screen flex-col md:flex-row">
+                <div class="flex-1  p-2 text-black">
+                    <div  id="dropdowns"></div>
+                </div>
+                <div class="flex-1 p-2">
+                    <div id="output"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-gradient-to-t from-[#1e2837] ... h-32 w-full items-bottom">
+            <div class="text-center mt-20 text-white">Made with 💗 by Harshvermac5</div>
+        </footer>
+    </div>
     <script src="bharatpe.js"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </body>
+
 </html>

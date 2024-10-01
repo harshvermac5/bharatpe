@@ -121,8 +121,12 @@ function formatObject(obj, indent = '') {
 }
 
 // Get the toggle button and add an event listener for dark mode toggle
-const toggleButton = document.getElementById('toggleButton');
-toggleButton.addEventListener('click', () => {
-    // Toggle the 'dark-mode' class on the body element
-    document.body.classList.toggle('dark-mode');
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+document.getElementById('darkModeToggle').checked = false; // Ensures the toggle starts off 
+darkModeToggle.addEventListener('change', () => {
+    // Toggle the 'dark-mode' class on the body element based on the checkbox state
+    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
 });
+
+

@@ -2,25 +2,10 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
     transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
 }
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-select {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-}
-#output {
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-}
+
 #toggleButton {
     background-color: #4CAF50;
     border: none;
@@ -35,24 +20,44 @@ select {
     border-radius: 5px;
     height: 40px;
 }
+
 .dark-mode {
     background-color: #333;
     color: #fff;
 }
+
 .dark-mode #output {
     border-color: #555;
 }
+
 .dark-mode #toggleButton {
     background-color: #555;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
 }
 
-footer{
+footer {
     margin-top: 50px;
     text-align: center;
+    bottom: 10px;
+}
+
+li {
+    color: #444;
+}
+
+.dark-mode li {
+    color: #c2c2c2
+}
+
+#dropdowns select {
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
 }
