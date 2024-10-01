@@ -43,7 +43,7 @@ function createDropdowns(obj, parentKey = '') {
     select.setAttribute('data-parent', parentKey);
     // Create a default option for the dropdown
     const defaultOption = document.createElement('option');
-    defaultOption.textContent = `Select an option in ${parentKey || 'Root'}`;
+    defaultOption.textContent = `Selecting an Product in ${parentKey || 'BharatPe'}`;
     defaultOption.value = '';
     select.appendChild(defaultOption); // Add the default option to the dropdown
 
@@ -130,3 +130,27 @@ darkModeToggle.addEventListener('change', () => {
 });
 
 
+
+// codes for tooltip
+const tooltip = document.querySelector('.tooltip');
+const target = document.querySelector('.tooltip-target');
+
+target.addEventListener('mousemove', (e) => {
+    tooltip.style.left = `${e.pageX - 80}px`; // Offset to the right
+    tooltip.style.top = `${e.pageY + 10}px`; // Offset downward
+    tooltip.style.visibility = 'visible'; // Show the tooltip
+});
+
+target.addEventListener('mouseleave', () => {
+    tooltip.style.visibility = 'hidden'; // Hide the tooltip
+});
+
+// codes for hiding a div
+document.getElementById("heading").addEventListener("click", function() {
+    var content = document.getElementById("content");
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+});

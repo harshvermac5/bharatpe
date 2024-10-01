@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./bharatpe.css">
     <link rel="icon" href="./bharatpe.png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
 </head>
 
@@ -16,24 +16,45 @@
         <main class="flex-grow">
             <!-- Navbar -->
             <nav class="flex justify-between items-center bg-gray-800 h-16 px-6">
-                <h1 class="text-white tracking-tighter font-bold text-2xl">BharatPe Hbuddy</h1>
-                <label for="darkModeToggle"
-                    class="relative inline-block h-8 w-12 cursor-pointer [-webkit-tap-highlight-color:_transparent]">
-                    <input type="checkbox" id="darkModeToggle" class="peer sr-only" />
+                <h1 class="text-white tracking-tighter font-bold text-3xl">BharatPe Hbuddy</h1>
+                <div class="tooltip-target">
+                    <label for="darkModeToggle"
+                        class="relative inline-block h-8 w-12 cursor-pointer [-webkit-tap-highlight-color:_transparent]">
+                        <input type="checkbox" id="darkModeToggle" class="peer sr-only" />
 
-                    <span class="absolute inset-0 m-auto h-2 rounded-full bg-gray-300"></span>
+                        <span class="absolute inset-0 m-auto h-2 rounded-full bg-gray-300"></span>
 
-                    <span
-                        class="absolute inset-y-0 start-0 m-auto size-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
-                        <span class="absolute inset-0 m-auto size-4 rounded-full bg-gray-200 transition"></span>
-                    </span>
-                </label>
+                        <span
+                            class="absolute inset-y-0 start-0 m-auto size-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
+                            <span class="absolute inset-0 m-auto size-4 rounded-full bg-gray-200 transition"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="tooltip">Dark Mode</div>
+
 
             </nav>
             <!-- Your main content goes here -->
             <div class="flex w-screen flex-col md:flex-row">
                 <div class="flex-1  p-2 text-black">
-                    <div  id="dropdowns"></div>
+                    <div class="mx-4 mb-4">
+                        <h1 id="heading" class="text-2xl" style="cursor: pointer;">
+                            <strong>Why Use Hbuddy? Because Why Not?</strong>
+                        </h1>
+                        <div id="content" style="display: none;">
+                            <ol>
+                                <li><strong id="heading">Saves Time:</strong> Switch between scenarios faster than your merchant can say, "Bhaiya, mera loan ka thoda dekh lijiye?"</li>
+                                <li class="mt-2"><strong id="heading">Always Up:</strong> Tired of yelling, "Sir, Qbuddy nahi chal raha!"? Hbuddy has your back!</li>
+                                <li class="mt-2"><strong id="heading">Dark Mode:</strong> You can't have a rest while work, your eyes can!</li>
+                                <li class="mt-2"><strong id="heading">Truly Yours:</strong> Have feedback? Send it to <a id="emailLink" href="mailto:harshvermac5@gmail.com">harshvermac5@gmail.com</a>—just keep it concise!</li>
+                                <li class="mt-2"><strong id="heading">Most Importantly:</strong> Crafted by someone who understands feelings... because your Qbuddy can’t hug you back!</li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                    <div class="text-xl text-semibold mt-8 ml-4" id="heading">Start by... </div>
+
+                    <div id="dropdowns"></div>
                 </div>
                 <div class="flex-1 p-2">
                     <div id="output"></div>
@@ -45,8 +66,8 @@
         </footer>
     </div>
     <script src="bharatpe.js"></script>
-    <script
-        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <!-- <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script> -->
 </body>
 
 </html>

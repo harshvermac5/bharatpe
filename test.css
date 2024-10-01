@@ -1,111 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
+    padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main-content {
-    flex-grow: 1;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2d3748; /* Gray-800 */
-    height: 64px; /* h-16 */
-    padding: 0 24px; /* px-6 */
-}
-
-.navbar-title {
+.tooltip-target {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
     color: white;
-    font-weight: bold;
-    font-size: 1.5rem; /* text-2xl */
-    letter-spacing: -0.05em; /* tracking-tighter */
-}
-
-.dark-mode-toggle {
-    position: relative;
-    width: 48px; /* w-12 */
-    height: 32px; /* h-8 */
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.toggle-background {
+.tooltip {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    height: 8px; /* h-2 */
-    background-color: #e2e8f0; /* bg-gray-300 */
-    border-radius: 9999px; /* rounded-full */
-}
-
-.toggle-circle {
-    position: absolute;
-    inset-y: 0;
-    left: 0;
-    margin: auto;
-    width: 24px; /* size-6 */
-    height: 24px; /* size-6 */
-    background-color: #4a5568; /* bg-gray-500 */
-    border-radius: 9999px; /* rounded-full */
-    transition: left 0.2s ease; /* Smooth transition */
-}
-
-input[type="checkbox"]:checked + .toggle-circle {
-    left: calc(100% - 24px); /* Move circle to the right */
-}
-
-.inner-circle {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 16px; /* size-4 */
-    height: 16px; /* size-4 */
-    background-color: #edf2f7; /* bg-gray-200 */
-    border-radius: 9999px; /* rounded-full */
-    transition: transform 0.2s ease; /* Smooth transition */
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.dropdown-container {
-    flex: 1;
-    padding: 8px; /* p-2 */
-    color: black;
-}
-
-.output-container {
-    flex: 1;
-    padding: 8px; /* p-2 */
-}
-
-.footer {
-    background: linear-gradient(to top, #1e2837, transparent);
-    height: 128px; /* h-32 */
-    display: flex;
-    align-items: flex-end; /* items-bottom */
-}
-
-.footer-text {
-    text-align: center;
-    margin-top: 40px; /* mt-20 */
-    color: white;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
 }
