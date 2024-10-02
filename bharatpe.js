@@ -43,7 +43,7 @@ function createDropdowns(obj, parentKey = '') {
     select.setAttribute('data-parent', parentKey);
     // Create a default option for the dropdown
     const defaultOption = document.createElement('option');
-    defaultOption.textContent = `Selecting an Product in ${parentKey || 'BharatPe'}`;
+    defaultOption.textContent = `${parentKey || 'BharatPe'}`;
     defaultOption.value = '';
     select.appendChild(defaultOption); // Add the default option to the dropdown
 
