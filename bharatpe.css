@@ -22,11 +22,11 @@ body {
 }
 
 #emailLink {
-    color: blue;
+    color: #6265f1;
 }
 
 .dark-mode #emailLink {
-    color: aqua;
+    color: #9799ff;
 }
 
 #content {
@@ -34,7 +34,7 @@ body {
 }
 
 .dark-mode {
-    background-color: #333;
+    background-color: #1d283b;
     color: #fff;
 }
 
@@ -61,6 +61,10 @@ footer {
     margin-top: 50px;
     text-align: center;
     bottom: 10px;
+}
+
+#navcolor {
+  background-color: #020617;
 }
 
 li {
@@ -105,6 +109,10 @@ li {
     visibility: hidden; /* Initially hidden */
     transition: opacity 0.3s;
     pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+}
+
+#linktome{
+  text-decoration: underline;
 }
 
 /* Tailwind starts here */
