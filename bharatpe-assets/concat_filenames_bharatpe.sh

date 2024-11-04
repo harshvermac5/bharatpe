@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Set the directory (current directory by default)
+dir="."
+
+# String to concatenate
+suffix="_bharatpe"
+
+# Loop through each file in the directory
+for file in "$dir"/*; do
+    # Check if it's a file
+    if [ -f "$file" ]; then
+        # Get the filename and extension
+        base="${file%.*}"
+        ext="${file##*.}"
+        # Construct the new filename
+        new_file="${base}${suffix}.${ext}"
+        # Rename the file
+        mv "$file" "$new_file"
+    fi
+done
+
+echo "Files renamed successfully!"
