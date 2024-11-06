@@ -1,0 +1,39 @@
+{
+    "BharatPe": {
+        "output": "false",
+        "Products": {
+            "output": "false",
+            "Settlement": {
+                "Pending": {
+                    "output": "true",
+                    "Within 48 hrs": "Asked to wait T+2 days",
+                    "After 48 hrs": "Escalate to L2"
+                },
+                "Success": {
+                    "output": "true",
+                    "Within 48 hrs": "Asked to wait 24-48 hours",
+                    "After 48 hrs": "Asked to wait up to 72 hours",
+                    "After 72 hrs": "Escalate to L2"
+                },
+                "Failed": {
+                    "output": "true",
+                    "resolution": "Ask to try again; change bank account if this occurs multiple times"
+                },
+                "Hold/Block": {
+                    "output": "false",
+                    "Specific Amount": {
+                        "output": "true",
+                        "Documents": [
+                            "1. Voter ID/Driving Licence",
+                            "2. PAN",
+                            "3. Shop Image (Inventory and Banner)",
+                            "4. Business Documents",
+                            "5. Last Five Transaction Invoices"
+                        ],
+                        "TAT": "24 to 48 hrs after upload, team will notify"
+                    }
+                }
+            }
+        }
+    }
+}
