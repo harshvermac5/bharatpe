@@ -1,9 +1,10 @@
 {
     "BharatPe": {
-        "output": "false",
+        "output": "true",
         "Products": {
             "output": "false",
             "Settlement": {
+                "output": "false",
                 "Pending": {
                     "output": "true",
                     "Within 48 hrs": "Asked to wait T+2 days",
@@ -23,14 +24,17 @@
                     "output": "false",
                     "Specific Amount": {
                         "output": "true",
-                        "Documents": [
-                            "1. Voter ID/Driving Licence",
-                            "2. PAN",
-                            "3. Shop Image (Inventory and Banner)",
-                            "4. Business Documents",
-                            "5. Last Five Transaction Invoices"
-                        ],
-                        "TAT": "24 to 48 hrs after upload, team will notify"
+                        "Documents": {
+                            "output": "false",
+                            "list": [
+                                "1. Voter ID/Driving Licence",
+                                "2. PAN",
+                                "3. Shop Image (Inventory and Banner)",
+                                "4. Business Documents",
+                                "5. Last Five Transaction Invoices"
+                            ],
+                            "TAT": "24 to 48 hrs after upload, team will notify"
+                        }
                     }
                 }
             }

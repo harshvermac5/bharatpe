@@ -136,8 +136,8 @@
     const target = document.querySelector('.tooltip-target');
 
     target.addEventListener('mousemove', (e) => {
-        tooltip.style.left = `${e.pageX - 80}px`; // Offset to the right
-        tooltip.style.top = `${e.pageY + 10}px`; // Offset downward
+        tooltip.style.left = `${e.pageX - 120}px`; // Offset to the right
+        tooltip.style.top = `${e.pageY - 12}px`; // Offset downward
         tooltip.style.visibility = 'visible'; // Show the tooltip
     });
 

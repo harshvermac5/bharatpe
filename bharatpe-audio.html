@@ -4,95 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Files</title>
-    <link rel="stylesheet" href="bharatpe.css">
+    <title>Hbuddy Therapy</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="icon" href="./bharatpe.png" type="image/png">
+    <link rel="stylesheet" href="bharatpe.css">
+    <link rel="stylesheet" href="tw-audio-bharatpe.css">
 </head>
 
-<body>
-    <div class="flex flex-col min-h-screen">
+<body class="flex flex-col w-full min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed truncate w-full top-0 left-0 flex justify-between items-center h-16 px-6">
+        <a href="./index.html" class="text-white tracking-tighter font-bold text-2xl">BharatPe HBuddy</a>
+        <div class="flex flex-row items-center">
+            <a class="p-2" href="./bharatpe-audio.html">🎵</a>
+            <div class="tooltip-target">
+                <label for="darkModeToggle"
+                    class="relative inline-block h-8 w-12 cursor-pointer [-webkit-tap-highlight-color:_transparent]">
+                    <input type="checkbox" id="darkModeToggle" class="peer sr-only" />
 
-        <main class="flex-grow">
+                    <span class="absolute inset-0 m-auto h-2 rounded-full bg-gray-300"></span>
 
-            <nav id="navcolor" class="flex justify-between items-center h-16 px-6">
-                <a href="./index.html" class="text-white tracking-tighter font-bold text-3xl">BharatPe HBuddy</a>
-                <div class="flex flex-row items-center">
-                    <div class="tooltip-target">
-                        <label for="darkModeToggle"
-                            class="relative inline-block h-8 w-12 cursor-pointer [-webkit-tap-highlight-color:_transparent]">
-                            <input type="checkbox" id="darkModeToggle" class="peer sr-only" />
-
-                            <span class="absolute inset-0 m-auto h-2 rounded-full bg-gray-300"></span>
-
-                            <span
-                                class="absolute inset-y-0 start-0 m-auto size-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
-                                <span class="absolute inset-0 m-auto size-4 rounded-full bg-gray-200 transition"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="tooltip">Dark Mode</div>
-                </div>
-            </nav>
-
-            <div class="flex flex-col md:flex-row p-5">
-                <div class="w-full md:w-1/2 text-3xl font-bold mb-5">Full Album Joy</div>
-                <div class="w-full md:w-1/2 font-bold mb-5">
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <label for="audio1" class="mr-2 min-w-32">Animals:</label>
-                            <audio id="audio1" controls class="w-full">
-                                <source src="./bharatpe-assets/animals_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <div class="flex items-center">
-                            <label for="audio2" class="mr-2 min-w-32">Dark:</label>
-                            <audio id="audio2" controls class="w-full">
-                                <source src="./bharatpe-assets/dark_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <div class="flex items-center">
-                            <label for="audio3" class="mr-2 min-w-32">Meddle:</label>
-                            <audio id="audio3" controls class="w-full">
-                                <source src="./bharatpe-assets/meddle_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <div class="flex items-center">
-                            <label for="audio4" class="mr-2 min-w-32">Wall:</label>
-                            <audio id="audio4" controls class="w-full">
-                                <source src="./bharatpe-assets/wall_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <div class="flex items-center">
-                            <label for="audio5" class="mr-2 min-w-32">Wish:</label>
-                            <audio id="audio5" controls class="w-full">
-                                <source src="./bharatpe-assets/wish_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <div class="flex items-center"></div>
-                            <label for="audio5" class="mr-2 min-w-32">Gnossiennes:</label>
-                            <audio id="audio5" controls class="w-full">
-                                <source src="./bharatpe-assets/gnossiennes_bharatpe.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        
-                        </div>
-                    </div>
-                </div>
+                    <span
+                        class="absolute inset-y-0 start-0 m-auto size-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
+                        <span class="absolute inset-0 m-auto size-4 rounded-full bg-gray-200 transition"></span>
+                    </span>
+                </label>
+                <div class="tooltip">Dark Mode</div>
             </div>
-        </main>
-        <footer id="footer" class="h-32 w-full">
-            <div class="text-center mt-20 text-white">
-                <div class="pt-20">Made with 💗 by <a id="linktome" target="_blank"
-                    href="https://www.google.com/search?q=%40harshvermac5+-bharatpe&client=firefox-b-m&sca_esv=4997d9601951f80e&sca_upv=1&ei=8-L8ZpT4NsmI4-EP2-m4cA&oq=%40harshvermac5+-bharatpe&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIhdAaGFyc2h2ZXJtYWM1IC1iaGFyYXRwZUixDlAAWABwAHgAkAEAmAGWB6ABlgeqAQM2LTG4AQPIAQCYAgCgAgCYAwCIBgGSBwCgBy0&sclient=mobile-gws-wiz-serp">harshvermac5</a></div>
-        </footer>
-        <script src="bharatpe.js"></script>
-    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow mt-24 px-10 sm:px-6">
+        <div class="flex flex-col sm:flex-row gap-16">
+            <div class="w-full sm:w-1/2">
+                <h1 class="audio-description ">
+                    <h1 class="text-3xl mb-5">You are going to experience <br></h1>
+                    A rich blend of classical elegance, experimental soundscapes, and alternative rock influences. Your
+                    taste merges the timeless complexity of composers like Beethoven, Chopin, and Mozart with the
+                    abstract,
+                    atmospheric qualities of modern artists and albums like <strong>OK Computer</strong> and <strong>The
+                        Wall</strong>. There's a deep appreciation for both the classical mastery of pieces like
+                    <strong>Gymnopédies</strong> and the raw energy of songs like <strong>Black Parade</strong> and
+                    <strong>Animals</strong>. Your playlist shows a penchant for introspective and conceptual music that
+                    spans genres, from serene piano works to the intricate, moody textures of progressive rock and
+                    electronic, all the way to the rebellious and reflective vibes of alternative anthems. It's a
+                    journey
+                    through sound that feels both intellectual and emotive, ranging from serene beauty to haunting,
+                    dystopian atmospheres.
+                </h1>
+                <h1 class="mt-20 text-2xl">Copyright Notice</h1>
+
+                <p>The music files uploaded here, including but not limited to:</p>
+
+                <ul class="my-5 list-disc">
+                    <li>animals_bharatpe.mp3</li>
+                    <li>beethoven_bharatpe.mp3</li>
+                    <li>bends_bharatpe.mp3</li>
+                    <li>blackparade_bharatpe.mp3</li>
+                    <li>bullets_bharatpe.mp3</li>
+                    <li>cheers_bharatpe.mp3</li>
+                    <li>chopin_bharatpe.mp3</li>
+                    <li>dark_bharatpe.mp3</li>
+                    <li>gymnopédiesgnossiennes_bharatpe.mp3</li>
+                    <li>meddle_bharatpe.mp3</li>
+                    <li>mozart_bharatpe.mp3</li>
+                    <li>okcomputer_bharatpe.mp3</li>
+                    <li>rainbows_bharatpe.mp3</li>
+                    <li>wall_bharatpe.mp3</li>
+                    <li>wish_bharatpe.mp3</li>
+                </ul>
+
+                <p>are the property of their respective copyright holders. I do not claim ownership of these works.</p>
+
+                <p>This repository is intended solely for educational, non-commercial purposes. I am not using these
+                    files
+                    for commercial gain, and they are shared here for personal or academic exploration only. No
+                    copyright
+                    infringement is intended. Please respect the intellectual property rights of the original creators.
+                </p>
+
+                <p>If you are the copyright holder of any content in this repository and wish to request its removal,
+                    please
+                    contact me directly, and I will promptly comply with your request.</p>
+
+            </div>
+
+            <!-- Audio File List -->
+            <div class="audio-list w-full sm:w-1/2 flex flex-col gap-2">
+                <div class="audio-item flex">
+                    <label class="w-48" for="Beethoven">Beethoven</label>
+                    <audio class="w-full" id="Beethoven" controls>
+                        <source src="./bharatpe-assets/beethoven_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Bends">Bends</label>
+                    <audio class="w-full" id="Bends" controls>
+                        <source src="./bharatpe-assets/bends_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Blackparade">BlackParade</label>
+                    <audio class="w-full" id="Blackparade" controls>
+                        <source src="./bharatpe-assets/blackparade_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Bullets">Bullets</label>
+                    <audio class="w-full" id="Bullets" controls>
+                        <source src="./bharatpe-assets/bullets_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Cheers">Cheers</label>
+                    <audio class="w-full" id="Cheers" controls>
+                        <source src="./bharatpe-assets/cheers_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Chopin">Chopin</label>
+                    <audio class="w-full" id="Chopin" controls>
+                        <source src="./bharatpe-assets/chopin_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48 truncate" for="Gymnopedies">GymnopédiesGnossiennes</label>
+                    <audio class="w-full" id="Gymnopedies" controls>
+                        <source src="./bharatpe-assets/gymnopédiesgnossiennes_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Mozart">Mozart</label>
+                    <audio class="w-full" id="Mozart" controls>
+                        <source src="./bharatpe-assets/mozart_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="OKcomputer">OKcomputer</label>
+                    <audio class="w-full" id="OKcomputer" controls>
+                        <source src="./bharatpe-assets/okcomputer_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="rainbows">Rainbows</label>
+                    <audio class="w-full" id="rainbows" controls>
+                        <source src="./bharatpe-assets/rainbows_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Animals">Animals</label>
+                    <audio class="w-full" id="Animals" controls>
+                        <source src="./bharatpe-assets/animals_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Dark">Dark</label>
+                    <audio class="w-full" id="Dark" controls>
+                        <source src="./bharatpe-assets/dark_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Meddle">Meddle</label>
+                    <audio class="w-full" id="Meddle" controls>
+                        <source src="./bharatpe-assets/meddle_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Wall">Wall</label>
+                    <audio class="w-full" id="Wall" controls>
+                        <source src="./bharatpe-assets/wall_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-item flex">
+                    <label class="w-48" for="Wish">Wish</label>
+                    <audio class="w-full" id="Wish" controls>
+                        <source src="./bharatpe-assets/wish_bharatpe.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white h-32 w-full flex justify-between items-end">
+        <div class="w-full mb-5">
+            <div class="pt-2">Made with 💗 by <a target="_blank"
+                    href="https://www.google.com/search?q=%40harshvermac5+-bharatpe&client=firefox-b-m&sca_esv=4997d9601951f80e&sca_upv=1&ei=8-L8ZpT4NsmI4-EP2-m4cA&oq=%40harshvermac5+-bharatpe&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIhdAaGFyc2h2ZXJtYWM1IC1iaGFyYXRwZUixDlAAWABwAHgAkAEAmAGWB6ABlgeqAQM2LTG4AQPIAQCYAgCgAgCYAwCIBgGSBwCgBy0&sclient=mobile-gws-wiz-serp">harshvermac5</a>
+            </div>
+    </footer>
+    <script src="bharatpe.js"></script>
 </body>
 
 </html>
