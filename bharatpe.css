@@ -58,7 +58,7 @@ nav {
     margin-bottom: 20px;
     align-items: center;
     background: linear-gradient(135deg, #020617, #1c2833); /* A dark gradient for the navbar */
-
+    z-index: 999;
 }
 
 footer {
